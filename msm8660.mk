@@ -65,9 +65,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	lights.msm8660
 
-# GalaxyS2Settings
+# SamsungServiceMode
 PRODUCT_PACKAGES += \
-     GalaxyS2Settings \
      SamsungServiceMode
 
 # GPS
