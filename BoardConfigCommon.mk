@@ -112,5 +112,6 @@ BOARD_CAMERA_USE_MM_HEAP := true
 # Workaround to avoid issues with legacy liblights on QCOM platforms
 TARGET_PROVIDES_LIBLIGHTS := true
 
-# Support charging mode
+# Charging mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
+BOARD_HAVE_SEC_BATTERY_CHARGER := true
