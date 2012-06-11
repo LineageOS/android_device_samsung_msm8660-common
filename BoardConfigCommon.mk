@@ -117,3 +117,4 @@ BOARD_BATTERY_DEVICE_NAME := "battery"
 BOARD_HAVE_SAMSUNG_AUDIO := true
 COMMON_GLOBAL_CFLAGS += -DNO_QCOM_MVS
 
+TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
