@@ -38,8 +38,11 @@ service console /system/bin/sh
     console
 
 service charger /charger
-    class core
+    class charger
     user root
+
+on charger
+    class_start charger
 
 # Used to disable USB when switching states
 on property:sys.usb.config=none
