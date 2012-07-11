@@ -114,6 +114,9 @@ BOARD_BATTERY_DEVICE_NAME := "battery"
 BOARD_HAVE_SAMSUNG_AUDIO := true
 COMMON_GLOBAL_CFLAGS += -DNO_QCOM_MVS
 
+# Workaround for Samsung volume bug
+BOARD_HAS_SAMSUNG_VOLUME_BUG := true
+
 # Nicer font rendering
 BOARD_USE_SKIA_LCDTEXT := true
 
