@@ -124,3 +124,5 @@ TARGET_DISABLE_ARM_PIE := true
 # Disable HW VSYNC sync our kernel does not support it yet
 TARGET_NO_HW_VSYNC := true
 
+# use toolchain 4.4.3 for kernel compile
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
