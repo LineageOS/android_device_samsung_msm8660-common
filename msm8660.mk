@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8660 \
     libaudioutils
 
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.msm8660
+
 # Lights Support
 PRODUCT_PACKAGES += \
 	lights.msm8660
