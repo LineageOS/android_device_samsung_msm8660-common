@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8660 \
     libaudioutils
 
+# PowerHAL
+PRODUCT_PACKAGES += \
+	power.msm8660
+
 # Lights Support
 PRODUCT_PACKAGES += \
 	lights.msm8660
