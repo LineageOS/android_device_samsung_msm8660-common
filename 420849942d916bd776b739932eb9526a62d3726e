@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAXH//9gY\u003d",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 19
+      },
+      "writtenOn": "2012-09-06T17:38:44Z",
+      "side": 1,
+      "message": "is this hack still needed ?\ni have removed it, and didnt noticed any difference",
+      "revId": "420849942d916bd776b739932eb9526a62d3726e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
