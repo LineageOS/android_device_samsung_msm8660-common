@@ -132,3 +132,8 @@ etc/firmware/vidc_1080p.fw
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
 
+# FM
+bin/btld
+lib/libfmradio.brcm-prop_rx.so
+lib/libfmradio.so
+
