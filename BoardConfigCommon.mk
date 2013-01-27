@@ -68,6 +68,8 @@ BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphic
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
+TARGET_NEEDS_BLUETOOTH_INIT_DELAY := true
+TARGET_CUSTOM_BLUEDROID := ../../../device/samsung/msm8660-common/bluedroid/bluetooth.c
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -120,4 +122,8 @@ TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 
 # WebGL
 ENABLE_WEBGL := true
+
+# FM radio
+COMMON_GLOBAL_CFLAGS += -DSTE_FM
+BOARD_USES_STE_FMRADIO := true
 
