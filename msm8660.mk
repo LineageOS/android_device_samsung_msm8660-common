@@ -32,24 +32,18 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
-# EGL config
-PRODUCT_COPY_FILES += \
-    device/samsung/msm8660-common/configs/egl.cfg:system/lib/egl/egl.cfg
-
 # Media config
 PRODUCT_COPY_FILES += \
     device/samsung/msm8660-common/configs/media_profiles.xml:system/etc/media_profiles.xml
 
+# Hals
 PRODUCT_PACKAGES += \
     copybit.msm8660 \
     gralloc.msm8660 \
     hwcomposer.msm8660 \
-    libgenlock \
-    libmemalloc \
-    liboverlay \
-    libqdutils \
-    libtilerenderer \
-    libI420colorconvert
+    lights.msm8660 \
+    gps.msm8660 \
+    power.msm8660
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -60,21 +54,12 @@ PRODUCT_PACKAGES += \
     libaudioutils
 
 # Lights Support
-PRODUCT_PACKAGES += \
-	lights.msm8660
+PRODUCT_PACKAGES +=
 
 # GalaxyS2Settings
 PRODUCT_PACKAGES += \
      GalaxyS2Settings \
      SamsungServiceMode
-
-# GPS
-PRODUCT_PACKAGES += \
-	gps.msm8660
-
-# Power
-PRODUCT_PACKAGES += \
-    power.msm8660
 
 ifeq ($(BOARD_HAVE_NFC),true)
 
@@ -102,19 +87,6 @@ PRODUCT_COPY_FILES += \
 
 endif # BOARD_HAVE_NFC
 
-# Omx
-PRODUCT_PACKAGES += \
-    libdivxdrmdecrypt \
-    libmm-omxcore \
-    libOmxCore \
-    libstagefrighthw \
-    libOmxVdec \
-    libOmxVenc \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc
-
 # Misc
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
@@ -125,17 +97,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     VisualizationWallpapers \
     librs_jni
-
-# Filesystem management tools
-PRODUCT_PACKAGES += \
-    make_ext4fs \
-    setup_fs
-
-# for bugmailer
-PRODUCT_PACKAGES += send_bug
-PRODUCT_COPY_FILES += \
-    system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
-    system/extras/bugmailer/send_bug:system/bin/send_bug
 
 # keylayouts
 PRODUCT_COPY_FILES += \
@@ -168,12 +129,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/msm8660-common/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/samsung/msm8660-common/idc/qwerty2.idc:system/usr/idc/qwerty2.idc
-
-# Charger
-PRODUCT_PACKAGES += charger charger_res_images
-PRODUCT_COPY_FILES += \
-	device/samsung/msm8660-common/lpm/lpm.rc:root/lpm.rc \
-	device/samsung/msm8660-common/lpm/init.qcom.lpm_boot.sh:root/init.qcom.lpm_boot.sh
 
 # Needed to reset bootmode when leaving recovery
 PRODUCT_COPY_FILES += \
