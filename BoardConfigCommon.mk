@@ -14,11 +14,6 @@
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm8660-common/include
 
-BOARD_VENDOR := samsung
-
-# Bootloader
-TARGET_NO_BOOTLOADER := true
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8660
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
@@ -52,7 +47,6 @@ WIFI_DRIVER_FW_PATH_AP      := "/system/etc/wifi/bcm4330_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P     := "/system/etc/wifi/bcm4330_p2p.bin"
 
 # Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphics.c
 
 # Bluetooth
@@ -61,25 +55,9 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/msm8660-common/bluetooth/vnd_msm8660.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
-# QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
+# GPS
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
-
-# Graphics
-USE_OPENGL_RENDERER := true
-TARGET_USES_C2D_COMPOSITION := true
-TARGET_USES_ION := true
-BOARD_EGL_CFG := device/samsung/msm8660-common/configs/egl.cfg
-
-# FM Radio
-#BOARD_HAVE_FM_RADIO := true
-#BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
-
-# Webkit
-TARGET_FORCE_CPU_UPLOAD := true
-
-# GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := msm8660
 
 # Vold
@@ -95,10 +73,6 @@ COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB
 
 # Workaround to avoid issues with legacy liblights on QCOM platforms
 TARGET_PROVIDES_LIBLIGHT := true
-
-# Charging mode
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
-BOARD_BATTERY_DEVICE_NAME := "battery"
 
 # Samsung VoIP/call routing
 BOARD_HAVE_SAMSUNG_AUDIO := true
