@@ -87,5 +87,5 @@ TARGET_DISABLE_ARM_PIE := true
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 
 # We have the old ION api
-BOARD_HAVE_OLD_ION_API := true
+# BOARD_HAVE_OLD_ION_API := true
 
