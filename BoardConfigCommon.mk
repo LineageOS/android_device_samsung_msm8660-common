@@ -83,9 +83,6 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_VOIP_ENABLED -DQCOM_ACDB_ENABLED
 # Disable PIE since it breaks ICS camera blobs
 TARGET_DISABLE_ARM_PIE := true
 
-# use toolchain 4.4.3 for kernel compile
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
-
 # We have the old ION api
 BOARD_HAVE_OLD_ION_API := true
 
