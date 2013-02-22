@@ -47,6 +47,7 @@ on init
     symlink /storage/sdcard1 /mnt/external_sd
     symlink /storage/usbdisk0 /usbdisk0
     symlink /storage/usbdisk0 /mnt/usbdisk0
+    symlink /sdcard /emmc
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
