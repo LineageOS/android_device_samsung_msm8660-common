@@ -494,12 +494,12 @@ on property:persist.timed.enable=true
     start time_daemon
 
 service ril-daemon1 /system/bin/rild -c 1
-    class late_start
+    class main
     socket rild1 stream 660 root radio
     socket rild-debug1 stream 660 radio system
     user root
     disabled
-    group radio cache inet misc audio sdcard_rw qcom_oncrpc diag
+    group radio cache inet misc audio sdcard_rw qcom_oncrpc diag qcom_diag log
 
 service profiler_daemon /system/bin/profiler_daemon
     class late_start
