@@ -126,6 +126,10 @@ etc/firmware/vidc_1080p.fw
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
 
+bin/bcm4330B1.hcd
+bin/bcm4330B1_murata.hcd
+bin/bcm4330B1_semco.hcd
+
 # Thermald
 bin/thermald
 etc/thermald.conf
