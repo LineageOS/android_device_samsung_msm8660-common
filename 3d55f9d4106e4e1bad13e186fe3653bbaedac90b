@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f4MfHgk",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2013-05-11T16:57:15Z",
+      "side": 1,
+      "message": "Poser le téléphone sur une surface plane et appuyer ici pour calibrer.",
+      "revId": "3d55f9d4106e4e1bad13e186fe3653bbaedac90b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
