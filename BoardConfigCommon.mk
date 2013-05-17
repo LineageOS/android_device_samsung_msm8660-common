@@ -23,6 +23,9 @@ TARGET_CPU_SMP := true
 # inherit from qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
+# Kernel toolchain
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+
 # Scorpion optimizations
 TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
 TARGET_USE_SCORPION_PLD_SET := true
