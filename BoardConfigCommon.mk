@@ -82,3 +82,5 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_ACDB_ENABLED
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
 
+# Use CAF media driver variant
+TARGET_QCOM_MEDIA_VARIANT := caf
