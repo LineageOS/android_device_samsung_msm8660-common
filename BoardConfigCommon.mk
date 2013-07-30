@@ -90,3 +90,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
 
 # Use older ION API for qcom/media
 TARGET_HAS_OLD_QCOM_ION := true
+
+# QCOM enhanced A/V
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
