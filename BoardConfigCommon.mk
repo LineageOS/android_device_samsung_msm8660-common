@@ -118,3 +118,5 @@ BOARD_SEPOLICY_UNION += \
     wpa.te \
     wpa_socket.te
 
+# Hack to avoid building audio-caf at the moment
+TARGET_QCOM_AUDIO_VARIANT := dummy
