@@ -71,6 +71,9 @@ BOARD_CAMERA_USE_MM_HEAP := true
 # Workaround to avoid issues with legacy liblights on QCOM platforms
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Workaround to allow us to have a local libhealthd
+TARGET_PROVIDES_LIBHEALTHD := true
+
 # Audio
 BOARD_HAVE_SAMSUNG_AUDIO := true
 BOARD_QCOM_VOIP_ENABLED := true
