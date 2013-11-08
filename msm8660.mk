@@ -164,7 +164,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so \
     debug.mdpcomp.maxlayer=3 \
     debug.hwc.dynThreshold=1.9 \
-    lpa.decode=true
+    lpa.decode=false
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/msm8660-common/overlay
