@@ -162,6 +162,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwc.dynThreshold=1.9 \
     lpa.decode=true
 
+# Dummy property to prevent handle_compcache from turnning swap off
+# --- this is not a solution, just a workaround for now...
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.zram.default=18
+
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/msm8660-common/overlay
 
