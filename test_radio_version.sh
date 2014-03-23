@@ -38,14 +38,17 @@ rmdir $MOUNT_POINT
 
 # Determine the radio model
 #
-# There is a string with "SGH-" followed by the model
-#   Examples: SGH-I727 SGH-I727R SGH-T989D
+# There is a string with "SGH-" or "SC-" followed by the model
+#   Examples: SGH-I727 SGH-I727R SGH-T989D SC-05D
 echo "Searching radio image for model..."
-RADIO_MODEL=`strings $IMAGE_TO_CHECK | grep -E ^SGH- -m 1 | cut -d - -f 2`
+RADIO_MODEL=`strings $IMAGE_TO_CHECK | grep -E ^SC- -m 1 | cut -d - -f 2`
 if [ "$RADIO_MODEL" == "" ]; then
-    ui_print "ERROR: Could not determine the radio model."
-    rm $IMAGE_TO_CHECK
-    exit 1
+    RADIO_MODEL=`strings $IMAGE_TO_CHECK | grep -E ^SGH- -m 1 | cut -d - -f 2`
+    if [ "$RADIO_MODEL" == "" ]; then
+        ui_print "ERROR: Could not determine the radio model."
+        rm $IMAGE_TO_CHECK
+        exit 1
+    fi
 fi
 ui_print "Found radio model: $RADIO_MODEL"
 
@@ -56,13 +59,16 @@ ui_print "Found radio model: $RADIO_MODEL"
 #   model name, followed by four or five capital letters,
 #   followed by either a number (1-9) or a capital letter
 #   Examples: I727UCMC1 I727UCLL3 I727UCLK4 I727RUXUMA7
-#             T989UVLE1 I757MUGMC5
+#             T989UVLE1 I757MUGMC5 SC05DOMMSG SC05DOMMSI
 echo "Searching radio image for version..."
-RADIO_VERSION=`strings $IMAGE_TO_CHECK | grep -E ^$RADIO_MODEL[A-Z]{4,5}[A-Z1-9]$ -m 1`
+RADIO_VERSION=`strings $IMAGE_TO_CHECK | grep -E ^SC$RADIO_MODEL[A-Z]{4,5}[A-Z1-9]$ -m 1`
 if [ "$RADIO_VERSION" == "" ]; then
-    ui_print "ERROR: Could not determine the radio version."
-    rm $IMAGE_TO_CHECK
-    exit 1
+    RADIO_VERSION=`strings $IMAGE_TO_CHECK | grep -E ^$RADIO_MODEL[A-Z]{4,5}[A-Z1-9]$ -m 1`
+    if [ "$RADIO_VERSION" == "" ]; then
+        ui_print "ERROR: Could not determine the radio version."
+        rm $IMAGE_TO_CHECK
+        exit 1
+    fi
 fi
 ui_print "Found radio version: $RADIO_VERSION"
 rm $IMAGE_TO_CHECK
