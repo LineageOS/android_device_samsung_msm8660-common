@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7af24918_c72554af",
+        "filename": "camera/CameraWrapper.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 8005
+      },
+      "writtenOn": "2014-04-07T03:12:50Z",
+      "side": 1,
+      "message": "Adding this can fix preview size for front cam:\n\n   if (id \u003d\u003d 1) {\n         // Force 640x480 preview size\n         params.remove(android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES);\n         params.remove(android::CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO);\n         params.set(android::CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO,\n                 \"640x480\");\n     }",
+      "revId": "dd8c16fb2d9af5c59747eef697f183ebfa84dcc6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7af24918_671a8070",
+        "filename": "camera/CameraWrapper.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 8005
+      },
+      "writtenOn": "2014-04-07T03:12:50Z",
+      "side": 1,
+      "message": "Commenting out this line fixed the lockups",
+      "revId": "dd8c16fb2d9af5c59747eef697f183ebfa84dcc6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
