@@ -20,4 +20,6 @@
 <resources>
     <!-- Samsung Camera Settings -->
     <bool name="ignorePreferredPreviewSizeForVideo">true</bool>
+    <!-- Restart preview on video quality change -->
+    <bool name="restartPreviewOnVideoQualityChange">true</bool>
 </resources>
