@@ -41,11 +41,17 @@ rmdir $MOUNT_POINT
 # There is a string with "SGH-" followed by the model
 #   Examples: SGH-I727 SGH-I727R SGH-T989D
 echo "Searching radio image for model..."
-RADIO_MODEL=`strings $IMAGE_TO_CHECK | grep -E ^SGH- -m 1 | cut -d - -f 2`
-if [ "$RADIO_MODEL" == "" ]; then
-    ui_print "ERROR: Could not determine the radio model."
-    rm $IMAGE_TO_CHECK
-    exit 1
+RADIO_MODEL=`strings $IMAGE_TO_CHECK | grep -E ^SC- -m 1 | cut -d - -f 2`
+if [ "$RADIO_MODEL" != "" ]; then
+	ui_print "Bypass the radio verification on quincydcm."
+	exit 0
+else
+    RADIO_MODEL=`strings $IMAGE_TO_CHECK | grep -E ^SGH- -m 1 | cut -d - -f 2`
+    if [ "$RADIO_MODEL" == "" ]; then
+		ui_print "ERROR: Could not determine the radio model."
+		rm $IMAGE_TO_CHECK
+		exit 1
+	fi
 fi
 ui_print "Found radio model: $RADIO_MODEL"
 
