@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5a18252c_942ffda0",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 8555
+      },
+      "writtenOn": "2014-10-26T12:11:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a18252c_f43f51d4",
+      "revId": "3e73e5fdc5a37c9c41bfb6c0e94d8eb704872d54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a18252c_143bedec",
         "filename": "BoardConfigCommon.mk",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2014-10-26T12:06:57Z",
       "side": 1,
       "message": "This is already defined further down.",
+      "revId": "3e73e5fdc5a37c9c41bfb6c0e94d8eb704872d54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a18252c_742ce1ab",
+        "filename": "msm8660.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 8555
+      },
+      "writtenOn": "2014-10-26T12:11:34Z",
+      "side": 1,
+      "message": "Good catch. Fixed.",
+      "parentUuid": "5a18252c_7455011c",
       "revId": "3e73e5fdc5a37c9c41bfb6c0e94d8eb704872d54",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
