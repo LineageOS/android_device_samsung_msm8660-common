@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a18252c_f43f51d4",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-10-26T12:07:54Z",
+      "side": 1,
+      "message": "A RIL/Radio section would go here.",
+      "revId": "3e73e5fdc5a37c9c41bfb6c0e94d8eb704872d54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a18252c_143bedec",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-10-26T12:07:54Z",
+      "side": 1,
+      "message": "Try to keep the sections alphabetized.",
+      "revId": "3e73e5fdc5a37c9c41bfb6c0e94d8eb704872d54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a18252c_7455011c",
         "filename": "msm8660.mk",
         "patchSetId": 1
