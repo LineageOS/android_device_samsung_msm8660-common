@@ -25,6 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+import init.target.rc
 import init.qcom.usb.rc
 
 on init
@@ -59,7 +60,6 @@ on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
     exec /system/bin/sh /init.qcom.syspart_fixup.sh
-    start thermald
 
 on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
@@ -394,13 +394,6 @@ service quipc_main /system/bin/quipc_main
     group net_admin wifi inet gps
     disabled
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
-    class late_start
-    user root
-    group system qcom_oncrpc
-    disabled
-    oneshot
-
 on property:crypto.driver.load=1
      insmod /system/lib/modules/qce.ko
      insmod /system/lib/modules/qcedev.ko
@@ -457,6 +450,7 @@ on property:sys.boot_completed=1
     chown system system /sys/devices/platform/rs300100a7.65536/sync_sts
     write /sys/devices/platform/msm_sdcc.3/idle_timeout 10
     start mpdecision
+    start thermald
 
 #service abld /system/bin/mm-abl-daemon
 #    class late_start
@@ -502,3 +496,8 @@ service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1
 service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
     class late_start
     disabled
+
+service charger /charger
+    class charger
+    critical
+    seclabel u:r:healthd:s0
